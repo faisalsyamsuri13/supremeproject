@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link href="/assets/svg/log_sq-144.jpg" rel="icon" sizes="144x144" />
+  <!-- Primary Meta Tags -->
+  <title>ScanApp - Free online barcode and QR code scanner</title>
+  <meta content="Free online barcode and QR code scanner" name="title" />
+  <meta content="Free online barcode and QR code scanner - scan directly on your web browser using camera or images saved on your device. Works well on smart phones as well as PC or Mac." name="description" />
+  <!-- Open Graph / Facebook -->
+  <meta content="website" property="og:type" />
+  <meta content="https://scanapp.org/" property="og:url" />
+  <meta content="Free online barcode and QR code scanner" property="og:title" />
+  <meta content="Free online barcode and QR code scanner - scan directly on your web browser using camera or images saved on your device. Works well on smart phones as well as PC or Mac." property="og:description" />
+  <meta content="https://scanapp.org/assets/svg/scanapp-logo.png" property="og:image" />
+  <!-- Twitter -->
+  <meta content="summary_large_image" property="twitter:card" />
+  <meta content="https://scanapp.org/" property="twitter:url" />
+  <meta content="Free online barcode and QR code scanner" property="twitter:title" />
+  <meta content="Free online barcode and QR code scanner - scan directly on your web browser using camera or images saved on your device. Works well on smart phones as well as PC or Mac." property="twitter:description" />
+  <meta content="https://scanapp.org/assets/svg/scanapp-logo.png" property="twitter:image" />
+  <!-- PWA -->
+  <meta content="#ffffff" name="theme-color" />
+  <link href="/assets/manifest.json" rel="manifest" />
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').then(function(reg) {
+        console.log("Awesome, SW registered", reg);
+      }).catch(function(err) {
+        console.warn("Falied to install sw", err)
+      });
+    }
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2KZEP7DPYH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-2KZEP7DPYH');
+  </script>
+  <link as="style" href="/assets/main.css" rel="preload" />
+  <link href="/assets/main.css" rel="stylesheet" />
+  <link href="https://scanapp.org" rel="canonical" />
+  <link as="style" href="/assets/app.css" rel="preload" />
+  <link href="/assets/app.css" rel="stylesheet" />
+  <base target="_parent" />
+  <link href="https://scanapp.org" rel="canonical" />
+</head>
+
+<body data-instant-allow-external-links="" data-instant-allow-query-string="">
+  <div>
+    <div id="scanapp-top-container">
+      <div id="scanapp-container">
+        <div id="scanner">
+          <div id="logo">
+            <img alt="logo" src="/assets/svg/scanapp.svg" />
+          </div>
+          <div id="reader"></div>
+          <div class="empty"></div>
+        </div>
+        <div id="workspace">
+          <div class="workspace-header">Scanned result</div>
+          <div id="no-result-container">Scan to get results</div>
+          <div id="new-scanned-result">
+            <div class="header">
+              New <span id="scan-result-code-type">{code}</span> detected!
+            </div>
+            <div class="section">
+              <div class="image" id="scan-result-image"></div>
+              <div class="data">
+                <table id="result_table">
+                  <tr>
+                    <!-- <td>Parsed</td> -->
+                    <td colspan="2">
+                      <div>
+                        <div class="badge">
+                          <div class="badge-icon">
+                            <span><b>Type</b></span>
+                          </div>
+                          <div class="badge-text">
+                            <span id="scan-result-badge-body">{type}</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="scan-result-parsed">{parsed result here}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Actions</td>
+                    <td>
+                      <img class="action_image" id="action-share" src="./assets/svg/share-svgrepo-com.svg" />
+                      <img class="action_image" id="action-copy" src="./assets/svg/copy-svgrepo-com.svg" />
+                      <img class="action_image" id="action-payment" src="./assets/svg/coin-svgrepo-com.svg" style="display: none" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Text</td>
+                    <td style="word-break: break-word">
+                      <div id="scan-result-text">{text result here}</div>
+                    </td>
+                  </tr>
+                </table>
+                <div id="body-footer">
+                  <button id="scan-result-close">Close and scan another</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="history">
+            <div class="workspace-header">Scan History</div>
+            <div id="history-list"></div>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        Scanning done locally on your device.
+        <br />
+        Built with ♥ using <a href="https://github.com/mebjas/html5-qrcode">mebjas/html5-qrcode</a>
+        <div class="empty"></div>
+        <a href="https://github.com/scanapp-org/scanapp-org.github.io/issues/new">Report issue</a> |
+        <a href="https://minhazav.dev">Contact us</a> |
+        <a href="/blog">Blog</a> |
+        <a href="https://blog.minhazav.dev">Blog by Minhaz</a> |
+        <a href="https://github.com/scanapp-org">Open source projects</a>
+      </div>
+    </div>
+    <div class="banners-container">
+      <div class="banners">
+        <div class="banner error">
+          <div class="banner-icon"><i data-eva="alert-circle-outline" data-eva-fill="#ffffff" data-eva-height="48" data-eva-width="48"></i></div>
+          <div class="banner-message" id="banner-error-message">{}</div>
+          <div class="banner-close" onclick="hideBanners()"><i data-eva="close-outline" data-eva-fill="#ffffff"></i></div>
+        </div>
+        <div class="banner success">
+          <div class="banner-icon"><i data-eva="checkmark-circle-outline" data-eva-fill="#ffffff" data-eva-height="48" data-eva-width="48"></i></div>
+          <div class="banner-message" id="banner-success-message">{}</div>
+          <div class="banner-close" onclick="hideBanners()"><i data-eva="close-outline" data-eva-fill="#ffffff"></i></div>
+        </div>
+      </div>
+    </div>
+    <div id="iframe-alert" style="display: none;">
+      <div id="iframe-alert-image"><img src="/assets/svg/alert-svgrepo-com.svg" /></div>
+      <div id="iframe-alert-subimage"><img src="/assets/svg/scanapp.svg" /></div>
+      <div id="iframe-alert-section">
+        The scanner is powered using <a href="https://scanapp.org">scanapp.org</a></div>
+      <div id="iframe-alert-actions">
+        <div>
+          Scan with ad-free experience using <a href="https://scanapp.org">scanapp.org</a>
+        </div>
+        <br />
+        <div>
+          <button id="iframe-alert-actions-navigate">Go to scanapp.org</button>
+          or
+          <button id="iframe-alert-actions-continue">Continue here (5)</button>
+        </div>
+      </div>
+      <!-- ScanAppAntiEmbedBottomAd -->
+      <div id="iframe-ad">
+        <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6209792783516879"></script>
+        <ins class="adsbygoogle" data-ad-client="ca-pub-6209792783516879" data-ad-format="auto" data-ad-slot="4131295088" data-full-width-responsive="true" style="display:block"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+    <script onload="eva.replace()" src="https://unpkg.com/eva-icons"></script>
+    <script src="/assets/js/html5-qrcode.min.js"></script>
+    <!-- <script src="/assets/js/app.min.js"></script> -->
+    <script src="/assets/js/app.js"></script>
+  </div>
+</body>
+
+</html>
+​
