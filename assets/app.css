@@ -105,12 +105,13 @@ body {
         text-align: center;
         font-size: 20pt;
         font-weight: bold;
-        background: #dadada;
+        background: #1C658C;
     }
 
     div#no-result-container {
         text-align: center;
-        font-size: 14pt;
+        font-size: 12pt;
+        font-weight: bold;
         padding: 50px 0px 50px 0px;
     }
 }
