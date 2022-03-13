@@ -6,6 +6,17 @@ body {
     overflow-x: hidden;
 }
 
+p.ft {
+  margin-top: 12px;
+  font-size: 12px;
+  color: white;
+}
+
+a.ft {
+  text-decoration: none;
+  color: #CAF0F8;
+}
+
 .empty {
     display: block;
     width: 100%;
@@ -37,7 +48,7 @@ body {
 #scanapp-top-container {
     min-height:100vh;
     display:flex;
-    flex-direction:column; 
+    flex-direction:column;
     justify-content:space-between;
 }
 
@@ -110,8 +121,8 @@ body {
 
     div#no-result-container {
         text-align: center;
-        font-size: 12pt;
         font-weight: bold;
+        font-size: 14pt;
         padding: 50px 0px 50px 0px;
     }
 }
@@ -149,13 +160,19 @@ div#new-scanned-result .image {
 }
 
 #footer {
-    margin-top: 100px;
+    /*margin-top: 100px;
     border-top: 1px solid silver;
     font-size: 9pt;
     font-weight: 400;
     background: #8080804a;
     padding: 50px;
-    text-align: center;
+    text-align: center;*/
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:60px;
+    background:#5902EC;
 }
 
 div#scan-result-parsed {
@@ -197,16 +214,16 @@ table#result_table {
   --color-dark: #1d1f20;
   --color-light: #f4f4f4;
   --color-shade: #bbb;
-  
+
   --badge-size: 150px;
-  
+
   --lock-color: #fff;
   --lock-width: 20px;
   --lock-stroke: 2.5px;
-  
+
 }
 
-.badge-icon, 
+.badge-icon,
 .badge-text{
   padding: 5px 5px;
   float:left;
@@ -246,7 +263,7 @@ table#result_table {
     width: 100%;
     z-index: 5;
 }
-  
+
 .banner {
     color: white;
     font-weight: 700;
@@ -271,7 +288,7 @@ table#result_table {
 .banner .banner-close:hover {
     background: rgba(0, 0, 0, 0.12);
 }
-  
+
 .banner.success {
     background: #10c15c;
 }
@@ -289,7 +306,7 @@ table#result_table {
 }
 .banner.info::after {
     background: #0b22e2;
-}  
+}
 .banner::after {
     content: "";
     position: absolute;
@@ -298,12 +315,12 @@ table#result_table {
     bottom: 100%;
     left: 0;
 }
-  
+
 .banner:not(.visible) {
     display: none;
     transform: translateY(-100%);
 }
-  
+
 .banner.visible {
     box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.12);
     animation-name: banner-in;
