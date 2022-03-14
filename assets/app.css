@@ -28,7 +28,7 @@ a.ft {
     background: #8f98b2;
     text-align: center;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: /*scroll*/ hidden;
     padding: 0px;
 }
 
@@ -141,7 +141,7 @@ div#no-result-container.hidden {
     background: #8f98b2;
     text-align: center;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: /*scroll*/ hidden;
 }
 
 div#new-scanned-result .header {
