@@ -104,9 +104,9 @@ function shareResult(decodedText, decodedResultType) {
     }
 
     navigator.share(shareData).then(function() {
-        showBanner("Shared successfully");
+        showBanner("Shared successfully!");
     }).catch(function(error) {
-        showBanner("Sharing cancelled or failed", false);
+        showBanner("Sharing cancelled or failed.", false);
     });
 }
 //#endregion
@@ -232,9 +232,9 @@ function detectType(decodedText) {
 function copyToClipboard(decodedText) {
     navigator.clipboard.writeText(decodedText)
         .then(function() {
-            showBanner("Text copied");
+            showBanner("Text copied.");
         }).catch(function(error) {
-            showBanner("Failed to copy", false);
+            showBanner("Failed to copy!", false);
         });
 }
 //#endregion
@@ -273,7 +273,7 @@ let HistoryManager = function() {
 
     this.flushToDisk = function() {
         // Save the serialized this._historyList to disk.
-        console.log("todo: saving history to disk")
+        console.log("Todo: Saving history to disk.")
     }
 }
 HistoryManager.prototype.add = function(historyItem) {
@@ -305,6 +305,7 @@ let QrResult = function(onCloseCallback) {
     let actionPaymentImage = document.getElementById("action-payment");
     let scanResultClose = document.getElementById("scan-result-close");
     let noResultContainer = document.getElementById("no-result-container");
+    //let workspaceHeaderColor = document.getElementById("workspace-header");
 
     // TODO(mebjas): fix -- scanResultImage --
     scanResultImage.style.display = "none";
@@ -322,8 +323,9 @@ let QrResult = function(onCloseCallback) {
             Logger.logScanRestart();
             onCloseCallback();
         }
-
+        //workspaceHeaderColor.style.color = "#ff5454";
         noResultContainer.classList.remove("hidden");
+
     });
 
 
@@ -393,6 +395,7 @@ let QrResult = function(onCloseCallback) {
 
     this.__onScanSuccess = function(decodedText, decodedResult, scanType) {
         noResultContainer.classList.add("hidden");
+        //workspaceHeaderColor.style.color = "#4ccf6f";
 
         scanResultCodeType.innerText
             = toFriendlyCodeType(decodedResult.result.format.formatName);

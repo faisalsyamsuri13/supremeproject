@@ -1,7 +1,7 @@
 body {
     padding: 0px;
     margin: 0px;
-    background: white;
+    background: #495371;
     font-family: roboto;
     overflow-x: hidden;
 }
@@ -25,7 +25,7 @@ a.ft {
 
 #new-scanned-result {
     width: 100%;
-    background: white;
+    background: #8f98b2;
     text-align: center;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -120,9 +120,10 @@ a.ft {
     }
 
     div#no-result-container {
+        color: white;
         text-align: center;
         font-weight: bold;
-        font-size: 14pt;
+        font-size: 12pt;
         padding: 50px 0px 50px 0px;
     }
 }
@@ -137,7 +138,7 @@ div#no-result-container.hidden {
 
 #new-scanned-result {
     width: 100%;
-    background: white;
+    background: #8f98b2;
     text-align: center;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -203,6 +204,7 @@ table#result_table {
 }
 
 #body-footer {
+    background: #495371;
     margin-top: 20px;
     border-top: silver solid 1px;
     padding: 10px;
