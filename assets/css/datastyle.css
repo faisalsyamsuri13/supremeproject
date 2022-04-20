@@ -1,0 +1,54 @@
+body {
+  background: #495371;
+  color: #FFFFFF;
+}
+p.one {
+  font-size: 12px;
+  color: white;
+}
+a, a.one{
+  text-decoration: none;
+}
+a {
+  color: #CAF0F8;
+}
+a.one {
+  color: #3E497A;
+}
+table {
+  font-family: Arial;
+  font-size: 15px;
+}
+td, th {
+  text-align: center;
+  border: 1px solid #DDD;
+}
+th {
+  position: -webkit-sticky;
+  position: sticky;
+  padding: 1px 12px;
+  top: 0;
+  z-index: 2;
+  background: #417D7A;
+}
+th[scope=row] {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+#container {
+  position: absolute;
+  top: 73px; right: 0; bottom: 50px; left: 0;
+  border: 1px solid silver;
+  overflow-y: auto;
+}
+#footer {
+  position: fixed;
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #5902EC;
+}

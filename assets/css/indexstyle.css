@@ -1,0 +1,62 @@
+body {
+  background-color: #5584AC;
+}
+img {
+   width: 127px;
+   height: 150px;
+}
+p.one, p.title, p.about, p.team, h3{
+  color: white;
+}
+a.bold {
+  font-weight: bold;
+}
+p.one {
+  font-size: 12px;
+}
+p.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+p.about {
+  text-align: justify;
+}
+p.team {
+  letter-spacing: 0.5px;
+}
+h1 {
+  color: #333C83;
+}
+hr {
+  background-color: white;
+  border-style: none;
+  height: 1.2px;
+  width: 30%;
+}
+a {
+  text-decoration: none;
+  color: #CAF0F8;
+}
+a.one {
+  text-decoration: none;
+  color: #062C30;
+}
+#main, #text_column {
+  position: absolute;
+  overflow-y: auto;
+}
+#main {
+  top: 5px; right: 0; bottom: 50px; left: 0;
+  border: 1px solid silver;
+}
+#text_column {
+  top: 200px; right: 100px; bottom: 0; left: 100px;
+}
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #5902EC;
+}
