@@ -12,7 +12,7 @@
     <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/President_University_Logo.png" alt="pu_logo">
     <h1 align="center">Welcome to Supreme v0.1 Alpha</h1>
     <hr>
-    <h4 align="center"><a class="one" href="datarecap.php">Data Recapitulation</a></h4>
+    <h4 align="center"><a class="one" href="http://192.168.43.109/supremeproject/datarecap.php">Data Recapitulation</a></h4>
     <h4 align="center"><a class="one" href="identification.html">Identification (Using QR Scanner)</a></h4>
     <hr>
   </div>
