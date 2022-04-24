@@ -18,6 +18,9 @@ p.title {
   font-size: 18px;
   font-weight: bold;
 }
+p.about, p.team {
+  margin-right: 100px;
+}
 p.about {
   text-align: justify;
 }
