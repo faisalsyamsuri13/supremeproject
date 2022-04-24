@@ -53,7 +53,7 @@ a.one {
   border: none;
 }
 #text_column {
-  top: 200px; right: 100px; bottom: 0; left: 100px;
+  top: 200px; right: 0px; bottom: 0; left: 100px;
 }
 #footer {
   position: fixed;
