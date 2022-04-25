@@ -1,0 +1,5 @@
+DHT11
+Electronics Lab
+28.95
+40.00
+<a href="specified_result.php?id=
