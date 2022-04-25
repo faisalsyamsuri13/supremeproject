@@ -5,7 +5,9 @@ This is the alpha version of the webapp-based data accessibility and management 
 Arranged by:
 
 Joni Welman Simatupang, Ph.D. as Project Director
+
 Fajar Choirul Anam as Firmware and Prototype Design Engineer
+
 Faisal Samsuri as Software and IoT Engineer
 
 Under the auspices of:
