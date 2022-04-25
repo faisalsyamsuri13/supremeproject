@@ -1,6 +1,6 @@
-# supremeproject
+# Supreme v0.1 Alpha
 
-This is the alpha version of the webapp-based data accessibility and management system called "Supreme", abbreviation for Sugity and President University Data Management System. It is assembled for fulfilling the final project requirements and answering the need of sophisticated system for storing and reviewing data in order to identify and tag every released product by the manufacturer. However, this web app and all of its tools used during the commissioning are still in the prototype scale. Therefore any advancement, improvement, and maintenance in the future will be needed before being deployed in the industrial environment.
+This is the alpha version of the web-app based data accessibility and management system called "Supreme", abbreviation for Sugity and President University Data Management System. It is assembled for fulfilling the final project requirements and answering the need of sophisticated system for storing and reviewing data in order to identify and tag every released product by the manufacturer. However, this web-app and all of its tools used during the commissioning are still in the prototype scale. Therefore any advancement, improvement, and maintenance in the future will be needed before being deployed in the industrial environment.
 
 
 Arranged by:
@@ -25,4 +25,4 @@ Finalized date: April 20th, 2022
 
 Note: for accessing by smartphone, open in landscape mode for better experience.
 
-Some feature can only be accessed on the local server, such as 'Data Recapitulation' and its children files since the data from MySQL stored in the localhost.
+Some features can only be accessed on the local server, such as 'Data Recapitulation' and its children files since the data from MySQL stored in the localhost.
