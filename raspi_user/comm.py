@@ -1,7 +1,6 @@
 #for Raspberry Pi Users
 
 import requests
-import json
 
 #accessing txt file
 text = open('temp.txt', 'r')
@@ -12,7 +11,7 @@ i = 0
 i = i + 1
 
 #server setting
-url = 'http://192.168.84.119/supremeproject/post-esp-data.php'
+url = 'http://ip_address/supremeproject/post-esp-data.php'
 api_key_value = 'tPmAT5Ab3j7F9'
 
 #array iteration from 'text' (txt file)
