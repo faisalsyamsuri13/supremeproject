@@ -1,3 +1,7 @@
+/*
+* This is the testing file for Arduino / ESP8266 interface with DHT11 Temperature and Humidity sensor.
+*/
+
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 #include <WiFiClient.h>
