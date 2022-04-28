@@ -173,12 +173,11 @@ div#new-scanned-result .image {
 }
 
 div#scan-result-parsed {
-    position: fixed;
-    display: flex;
     background: #dadada54;
     color: black;
     border: 1px solid #b3b3b333;
     padding: 5px;
+    width: auto;
     font-family: consolas;
 }
 
