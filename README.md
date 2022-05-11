@@ -29,4 +29,5 @@ Some features can only be accessed on the local server, such as 'Data Recapitula
 
 Update on April 30th, 2021:
 1. Search by date
-2. Testing by batch file
+2. Changing database from `sensor_data` to `as7341_sensor_data`
+3. Testing by batch file
