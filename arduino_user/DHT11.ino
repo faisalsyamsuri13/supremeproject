@@ -48,7 +48,7 @@ void setup() {
   delay(5000);
 
   //sensor initialization
-  //Serial.println(F("DHT11 test!"));
+  Serial.println(F("DHT11 test!"));
 }
 
 void loop() {
@@ -80,7 +80,7 @@ void loop() {
   //http client setting and data posting
   if(WiFi.status() == WL_CONNECTED && (!isnan(h) || !isnan(t))){
     http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-    String request = "api_key=" + apiKeyValue + "&sensor=" + sensorName + "&location=" + sensorLocation + "&value1=" + String(t) + "&value2=" + String(h) + "&value3=" + "<a href=\"specified_result.php?id=" + i++ + "\">Preview</a>" + "";
+    String request = "api_key=" + apiKeyValue + "&sensor=" + sensorName + "&location=" + sensorLocation + "&value1=" + String(t) + "&value2=" + String(h) + "";
     Serial.print("HTTP Request Data: ");
     Serial.println(request);
     int response = http.POST(request);
