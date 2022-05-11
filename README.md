@@ -25,4 +25,7 @@ Finalized date: April 20th, 2022
 
 Note: for accessing by smartphone, open in landscape mode for better experience.
 
-Some features can only be accessed on the local server, such as 'Data Recapitulation' and its children files since the data from MySQL stored in the localhost.
+Some features can only be accessed on the local server, such as 'Data Recapitulation' and its children files since the data from MySQL stored in the localhost. Suitable for managing data from Raspberry Pi and Arduino.
+
+Update on April 30th, 2021:
+1. Search by date
