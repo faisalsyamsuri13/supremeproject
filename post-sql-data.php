@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "pma";
 $password = "RIVeMKSn4[/Os7(1";
-$dbname = "nodemcu_database_v2";
+$dbname = "raspi_database";
 
 /*$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);*/
 
@@ -17,7 +17,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $location = test_input($_POST["location"]);
         $value1 = test_input($_POST["value1"]);
         $value2 = test_input($_POST["value2"]);
-        $value3 = html_entity_decode(test_input($_POST["value3"]));
+        $value3 = test_input($_POST["value3"]);
+        $value4 = test_input($_POST["value4"]);
+        $value5 = test_input($_POST["value5"]);
+        $value6 = test_input($_POST["value6"]);
+        $value7 = test_input($_POST["value7"]);
+        $value8 = test_input($_POST["value8"]);
+        $value9 = test_input($_POST["value9"]);
+        $value10 = test_input($_POST["value10"]);
+        /*$keygen = test_input($_POST["keygen"]);
+        $value11 = html_entity_decode(test_input($_POST["value3"]));*/
 
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -26,8 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "INSERT INTO sensor_data (sensor, location, value1, value2, value3)
-        VALUES ('" . $sensor . "', '" . $location . "', '" . $value1 . "', '" . $value2 . "', '" . $value3 . "')";
+        $sql = "INSERT INTO as7341_sensor_data (sensor, location, value1, value2, value3, value4, value5, value6, value7, value8, value9, value10)
+        VALUES ('" . $sensor . "', '" . $location . "', '" . $value1 . "', '" . $value2 . "', '" . $value3 . "','" . $value4 . "', '" . $value5 . "', '" . $value6 . "','" . $value7 . "', '" . $value8 . "', '" . $value9 . "','" . $value10 . "')";
 
         if ($conn->query($sql) === TRUE) {
             echo "HTTP Code Response: 200\nNew record created successfully!";
