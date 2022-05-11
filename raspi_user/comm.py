@@ -11,7 +11,7 @@ text = open('temp.txt', 'r')
 list = text.readlines()
 
 #server setting
-server_name = 'http://ip_address/supremeprojectv2/post-sql-data.php'
+server_name = 'http://192.168.0.112/supremeproject/post-sql-data.php'
 api_key_value = 'tPmAT5Ab3j7F9'
 
 #key = keygen.key
@@ -46,14 +46,20 @@ myobj = {'api_key':api_key_value,
          'value8':value8,
          'value9':value9,
          'value10':value10
-        }
+         }
 
 #posting to the server and retrieving the response
 #posting by function
 def response():
-         post_data = requests.post(server_name, data = myobj)
-         print(post_data.text)
+    try:
+        post_data = requests.post(server_name, data = myobj)
+        print(post_data.text)
+    except:
+        print("Cannot connect and post the data to the server, please check the server configuration!")
 
-#direct posting by import
-#response = requests.post(server_name, data = myobj)
-#print(response.text)
+#direct posting via import
+#try:
+#   response = requests.post(server_name, data = myobj)
+#   print(response.text)
+#except:
+#   print("Cannot connect and post the data to the server, please check the server configuration!")
