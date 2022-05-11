@@ -49,5 +49,11 @@ myobj = {'api_key':api_key_value,
         }
 
 #posting to the server and retrieving the response
-response = requests.post(server_name, data = myobj)
-print(response.text)
+#posting by function
+def response():
+         post_data = requests.post(server_name, data = myobj)
+         print(post_data.text)
+
+#direct posting by import
+#response = requests.post(server_name, data = myobj)
+#print(response.text)
