@@ -37,7 +37,16 @@ myobj = {'api_key':api_key_value,
          'sensor':sensor,
          'location':location,
          'value1':value1,
-         'value2':value2,'value3':value3,'value4':value4,'value5':value5,'value6':value6,'value7':value7,'value8':value8,'value9':value9,'value10':value10}
+         'value2':value2,
+         'value3':value3,
+         'value4':value4,
+         'value5':value5,
+         'value6':value6,
+         'value7':value7,
+         'value8':value8,
+         'value9':value9,
+         'value10':value10
+        }
 
 #posting to the server and retrieving the response
 response = requests.post(server_name, data = myobj)
