@@ -31,7 +31,6 @@ value9 = list[8]
 value10 = list[9]
 #keygen = key
 #link = '<a href="preview.php?id={}>Preview</a>"'.format(keygen)
-#value3 = list[12] + "".join('{}'.format(i) + '">Preview</a>')
 
 #key-value pair for accessing the variable in the PHP server file
 myobj = {'api_key':api_key_value,
