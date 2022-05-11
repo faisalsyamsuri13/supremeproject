@@ -4,6 +4,7 @@
 #communication module being used for posting data
 import requests
 import random
+import socket
 #import keygen
 
 #accessing txt file
@@ -11,7 +12,8 @@ text = open('temp.txt', 'r')
 list = text.readlines()
 
 #server setting
-server_name = 'http://192.168.0.112/supremeproject/post-sql-data.php'
+ip_address = socket.gethostbyname(socket.gethostname())
+server_name = 'http://{}/supremeproject/post-sql-data.php'.format(ip_address)
 api_key_value = 'tPmAT5Ab3j7F9'
 
 #key = keygen.key
