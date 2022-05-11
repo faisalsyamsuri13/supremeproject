@@ -29,3 +29,4 @@ Some features can only be accessed on the local server, such as 'Data Recapitula
 
 Update on April 30th, 2021:
 1. Search by date
+2. Testing by batch file
