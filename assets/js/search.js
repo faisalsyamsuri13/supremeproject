@@ -10,7 +10,7 @@ searchby.innerHTML = criteria.map((criterion) => `<input type="radio" name="sear
 //declare the variable for displaying the button by iterating the element name
 const radioButtons = document.querySelectorAll('input[name=search_criteria]')
 for (const radioButton of radioButtons) {
-  radioButton.addEventListener('change', showSelected)
+  radioButton.addEventListener('change', showSelected);
 }
 
 //customized function for displaying the particular column type
