@@ -11,7 +11,7 @@ text = open('temp.txt', 'r')
 list = text.readlines()
 
 #server setting
-server_name = 'http://192.168.0.112/supremeprojectv2/post-sql-data.php'
+server_name = 'http://ip_address/supremeprojectv2/post-sql-data.php'
 api_key_value = 'tPmAT5Ab3j7F9'
 
 #key = keygen.key
