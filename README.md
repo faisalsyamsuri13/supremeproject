@@ -27,7 +27,7 @@ Note: for accessing by smartphone, open in landscape mode for better experience.
 
 Some features can only be accessed on the local server, such as 'Data Recapitulation' and its children files since the data from MySQL stored in the localhost. Suitable for managing data from Raspberry Pi and Arduino.
 
-Update on April 30th, 2021:
+Update on April 30th, 2022:
 1. Search by date
 2. Changing database from `sensor_data` to `as7341_sensor_data`
 3. Testing by batch file
