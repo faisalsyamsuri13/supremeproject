@@ -1,4 +1,6 @@
 <?php
+/*Attention! Be careful of assigning a variable, make sure it is not predefined as used clause in SQL*/
+
 $servername = "localhost";
 $username = "pma";
 $password = "RIVeMKSn4[/Os7(1";
@@ -8,7 +10,7 @@ $dbname = "raspi_database";
 
 $api_key_value = "tPmAT5Ab3j7F9";
 
-$api_key = $sensor = $location = $value1 = $value2 = $value3 = "";
+$api_key = $sensor = $location = $value1 = $value2 = $value3 = $value4 = $value5 = $value6 = $value7 = $value8 = $value9 = $value10 = $pub_key = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $api_key = test_input($_POST["api_key"]);
@@ -25,8 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $value8 = test_input($_POST["value8"]);
         $value9 = test_input($_POST["value9"]);
         $value10 = test_input($_POST["value10"]);
-        /*$keygen = test_input($_POST["keygen"]);
-        $value11 = html_entity_decode(test_input($_POST["value3"]));*/
+        $pub_key = test_input($_POST["pub_key"]);
 
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -35,11 +36,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "INSERT INTO as7341_sensor_data (sensor, location, value1, value2, value3, value4, value5, value6, value7, value8, value9, value10)
-        VALUES ('" . $sensor . "', '" . $location . "', '" . $value1 . "', '" . $value2 . "', '" . $value3 . "','" . $value4 . "', '" . $value5 . "', '" . $value6 . "','" . $value7 . "', '" . $value8 . "', '" . $value9 . "','" . $value10 . "')";
+        $sql = "INSERT INTO as7341_sensor_data (sensor, location, value1, value2, value3, value4, value5, value6, value7, value8, value9, value10, pub_key)
+        VALUES ('" . $sensor . "','" . $location . "','" . $value1 . "','" . $value2 . "','" . $value3 . "','" . $value4 . "','" . $value5 . "','" . $value6 . "','" . $value7 . "','" . $value8 . "','" . $value9 . "','" . $value10 . "','" . $pub_key . "')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "HTTP Code Response: 200\nNew record created successfully!";
+            echo "- HTTP Code Response: 200\n- New record created successfully!";
         }
         else {
             echo "Error: " . $sql . "<br>" . $conn->error;
