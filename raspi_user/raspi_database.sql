@@ -1,5 +1,5 @@
 CREATE DATABASE `raspi_database`;
-CREATE TABLE `sensor_data` (
+CREATE TABLE `as7341_sensor_data` (
   `id` int(6) AUTO_INCREMENT PRIMARY KEY,
   `sensor` varchar(30) NOT NULL,
   `location` varchar(30) NOT NULL,

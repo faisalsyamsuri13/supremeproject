@@ -5,7 +5,7 @@
 import requests
 import random
 import socket
-#import keygen
+import keygen
 
 #accessing txt file
 text = open('temp.txt', 'r')
@@ -31,7 +31,7 @@ value7 = list[6]
 value8 = list[7]
 value9 = list[8]
 value10 = list[9]
-#keygen = key
+key = keygen.key
 #link = '<a href="preview.php?id={}>Preview</a>"'.format(keygen)
 
 #key-value pair for accessing the variable in the PHP server file
@@ -47,7 +47,8 @@ myobj = {'api_key':api_key_value,
          'value7':value7,
          'value8':value8,
          'value9':value9,
-         'value10':value10
+         'value10':value10,
+         'key':key
          }
 
 #posting to the server and retrieving the response
@@ -57,7 +58,7 @@ def response():
         post_data = requests.post(server_name, data = myobj)
         print(post_data.text)
     except:
-        print("Cannot connect and post the data to the server, please check the server configuration!")
+        print("Unable to connect and post the data to the server, please check the server configuration!")
 
 #direct posting via import
 #try:
