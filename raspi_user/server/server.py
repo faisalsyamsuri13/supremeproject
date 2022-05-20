@@ -46,3 +46,4 @@ while True:
         print(f"The session has been terminated! Error: {e}")
         client_socket.close()
         s.close()
+        break
