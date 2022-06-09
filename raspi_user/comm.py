@@ -2,18 +2,28 @@
 #using key generator for identifying and calling the row to be generated in QR Code
 
 #communication module being used for posting data
+import csv
 import requests
 import random
 import socket
 import keygen
+import qrgen
 
 #accessing txt file
-text = open('temp.txt', 'r')
-list = text.readlines()
+#text = open('temp.txt', 'r')
+#list = text.readlines()
+
+#accessing csv file
+file = open("color.csv", "r")
+csvreader = csv.reader(file)
+rows = []
+for row in csvreader:
+    rows.append(row)
+lines = len(rows)
 
 #server setting
 ip_address = socket.gethostbyname(socket.gethostname())
-server_name = 'http://{}/supremeproject/post-sql-data.php'.format(ip_address)
+api_url = 'http://{}/supremeproject/post-sql-data.php'.format(ip_address)
 api_key_value = 'tPmAT5Ab3j7F9'
 
 #key = keygen.key
@@ -21,21 +31,21 @@ api_key_value = 'tPmAT5Ab3j7F9'
 #array iteration from 'text' (txt file)
 sensor = "AS7341"
 location = "Electronics Lab"
-value1 = list[0]
-value2 = list[1]
-value3 = list[2]
-value4 = list[3]
-value5 = list[4]
-value6 = list[5]
-value7 = list[6]
-value8 = list[7]
-value9 = list[8]
-value10 = list[9]
-key = keygen.key
+value1 = rows[lines-1][1]
+value2 = rows[lines-1][2]
+value3 = rows[lines-1][3]
+value4 = rows[lines-1][4]
+value5 = rows[lines-1][5]
+value6 = rows[lines-1][6]
+value7 = rows[lines-1][7]
+value8 = rows[lines-1][8]
+value9 = rows[lines-1][9]
+value10 = rows[lines-1][10]
+pub_key = keygen.key
 #link = '<a href="preview.php?id={}>Preview</a>"'.format(keygen)
 
 #key-value pair for accessing the variable in the PHP server file
-myobj = {'api_key':api_key_value,
+my_data = {'api_key':api_key_value,
          'sensor':sensor,
          'location':location,
          'value1':value1,
@@ -48,15 +58,16 @@ myobj = {'api_key':api_key_value,
          'value8':value8,
          'value9':value9,
          'value10':value10,
-         'key':key
+         'pub_key':pub_key
          }
 
 #posting to the server and retrieving the response
 #posting by function
 def response():
     try:
-        post_data = requests.post(server_name, data = myobj)
+        post_data = requests.post(api_url, data = my_data)
         print(post_data.text)
+        qrgen.generate()
     except:
         print("Unable to connect and post the data to the server, please check the server configuration!")
 

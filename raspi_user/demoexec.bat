@@ -7,7 +7,7 @@ ECHO =========================================== &ECHO.
 SET ip_address="IPv4 Address"
 FOR /f "usebackq tokens=2 delims=:" %%f IN (`ipconfig ^| FINDSTR /c:%ip_address%`) DO ECHO Message from the server%%f: &ECHO.
 TIMEOUT 1 > NUL
-py -c "import comm; comm.response()"
+py -c "import comm_test as comm; comm.response()"
 TIMEOUT 1 > NUL
 client.py
 ECHO ===========================================

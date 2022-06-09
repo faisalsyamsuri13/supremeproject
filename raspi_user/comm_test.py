@@ -6,7 +6,7 @@ import requests
 import random
 import socket
 import keygen
-import qr_generator as gen
+import qrgen
 
 #accessing txt file
 #text = open('temp.txt', 'r')
@@ -14,8 +14,9 @@ import qr_generator as gen
 
 #server setting
 ip_address = socket.gethostbyname(socket.gethostname())
-server_name = 'http://{}/supremeproject/post-sql-data.php'.format(ip_address)
+api_url = 'http://{}/supremeproject/post-sql-data.php'.format(ip_address)
 api_key_value = 'tPmAT5Ab3j7F9'
+#head = {"Content-Type":"application/x-www-form-urlencoded"}
 
 n1 = "1234"
 n2 = "0123456789"
@@ -37,7 +38,8 @@ pub_key = keygen.key
 #link = '<a href="preview.php?id={}>Preview</a>"'.format(keygen)
 
 #key-value pair for accessing the variable in the PHP server file
-myobj = {'api_key':api_key_value,
+
+my_data = {'api_key':api_key_value,
          'sensor':sensor,
          'location':location,
          'value1':value1,
@@ -57,9 +59,9 @@ myobj = {'api_key':api_key_value,
 #posting by function
 def response():
     try:
-        post_data = requests.post(server_name, data = myobj)
+        post_data = requests.post(api_url, data = my_data)
         print(post_data.text)
-        gen.generate()
+        qrgen.generate()
     except Exception as e:
         print("Cannot connect and post the data to the server, please check the server configuration! Error: {}".format(e))
 #direct posting via import
