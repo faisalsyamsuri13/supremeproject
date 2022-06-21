@@ -30,4 +30,6 @@ Some features can only be accessed on the local server, such as 'Data Recapitula
 Update on April 30th, 2022:
 1. Search by date
 2. Changing database from `sensor_data` to `as7341_sensor_data`
-3. Testing by batch file
+3. Testing by Batch file
+4. Testing by Bash file
+5. Integrated to Raspberry Pi with AS7341 Spectrometry Sensor
