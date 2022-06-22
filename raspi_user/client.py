@@ -19,7 +19,7 @@ try:
     s.connect((host, port))
     s.send(f"{filename}{SEPARATOR}{filesize}".encode())
 except:
-    print("\nServer is unavailable, make sure the server is ready.")
+    print("\n- Server is unavailable, make sure the server is ready.")
 
 progress = tqdm.tqdm(range(filesize), f"Sending {filename}", unit="B", unit_scale=True, unit_divisor=1024)
 with open(filename, "rb") as f:
@@ -32,9 +32,10 @@ with open(filename, "rb") as f:
         try:
             s.sendall(bytes_read)
             progress.update(len(bytes_read))
+            print("\n- The QR Code Image has been delivered to the server!")
 
         except:
-            print("\nServer is being interrupted or intentionally closed.")
+            print("\n- Server is being interrupted or intentionally closed.")
             break
 
 s.close()
