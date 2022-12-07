@@ -2,6 +2,8 @@
 
 This is the alpha version of the web-app based data accessibility and management system called "Supreme", abbreviation for Sugity and President University Data Management System. It is assembled for fulfilling the final project requirements and answering the need of sophisticated system for storing and reviewing data in order to identify and tag every released product by the manufacturer. However, this web-app and all of its tools used during the commissioning are still in the prototype scale. Therefore any advancement, improvement, and maintenance in the future will be needed before being deployed in the industrial environment.
 
+Preview at https://faisalsyamsuri13.github.io/supremeproject
+
 
 Arranged by:
 
